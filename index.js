@@ -1,201 +1,180 @@
-const cardsContainer = document.getElementById("cards");
-const newGameButton = document.getElementById("newGame");
-
-const popup = document.getElementById("popup");
-const result = document.getElementById("result");
-const closePopup = document.getElementById("closePopup");
-
-const suits = ["♥", "♦", "♣", "♠"];
-
-const ranks = [
-    "2", "3", "4", "5", "6", "7",
-    "8", "9", "10", "J", "Q", "K", "A"
-];
-
-{
-    "K",
-    suits: "♥",
-    img: "king_of_hearts.png"
-}
-
-{
-    "2",
-    suits: "♥",
-    image: "2_of_hearts.png"
-}
-
-// Створюємо колоду
+const game = document.getElementById("game");
+const popup = document.getElementById("popup"); const result = document.getElementById("result"); const description = document.getElementById("description");
+const playAgain = document.getElementById("playAgain");
+/* Колода */
+const suits = [ { symbol: "♠", name: "spades" }, { symbol: "♥", name: "hearts" }, { symbol: "♦", name: "diamonds" }, { symbol: "♣", name: "clubs" } ];
+const ranks = [ "2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K", "A" ];
+/* Створюємо всю колоду */
 function createDeck() {
 
 const deck = [];
 
-    for (let suit of suits) {
+for (const suit of suits) {
 
-        for (let rank of ranks) {
+    for (let i = 0; i < ranks.length; i++) {
 
-            deck.push({
-                suit: suit,
-                rank: rank
-            });
-
-        }
-    }
-
-    return deck;
-}
-
-
-
-// Перемішуємо колоду
-function shuffle(deck) {
-
-    return deck.sort(() => Math.random() - 0.5);
-
-}
-
-
-// Створюємо гру
-function startGame() {
-
-    cardsContainer.innerHTML = "";
-
-    selectedCards = [];
-
-    const deck = shuffle(createDeck());
-
-    // Беремо перші 5 карт
-    const fiveCards = deck.slice(0, 5);
-
-    fiveCards.forEach((card, index) => {
-
-        const cardElement = document.createElement("div");
-
-        cardElement.classList.add("card");
-
-       cardElement.innerHTML = ` <div class="card-inner">
-
-    <div class="card-front">
-        <img src="C:\Users\anton\htmlrepo\PNG-cards/card back red.png" alt="Card back">
-    </div>
-
-    <div class="card-back">
-        <img src="C:\Users\anton\htmlrepo\PNG-cards/${card.suit}.png" alt="${card.rank} ${card.suit}">
-    </div>
-
-</div>
-`;
-
-
-        cardElement.addEventListener("click", () => {
-
-            // Не дозволяємо натиснути повторно
-            if (cardElement.classList.contains("flipped")) {
-                return;
-            }
-
-            cardElement.classList.add("flipped");
-
-            selectedCards.push(card);
-
-            // Коли відкриті всі карти
-            if (selectedCards.length === 5) {
-
-                setTimeout(() => {
-
-                    const combination = checkCombination(selectedCards);
-
-                    showPopup(combination);
-
-                }, 700);
-
-            }
-
+        deck.push({
+            rank: ranks[i],
+            value: i + 2,
+            suit: suit.symbol
         });
 
-        cardsContainer.appendChild(cardElement);
+    }
+}
+
+return deck;
+}
+/* Перемішування */
+function shuffle(deck) {
+
+for (let i = deck.length - 1; i > 0; i--) {
+
+    const random = Math.floor(Math.random() * (i + 1));
+
+    [deck[i], deck[random]] =
+        [deck[random], deck[i]];
+}
+
+return deck;
+}
+/* Створюємо 5 карт */
+function startGame() {
+
+game.innerHTML = "";
+
+popup.classList.add("hidden");
+
+let deck = createDeck();
+
+deck = shuffle(deck);
+
+const cards = deck.slice(0, 5);
+
+cards.forEach(card => {
+
+    const cardElement = document.createElement("div");
+
+    cardElement.classList.add("card");
+
+    cardElement.innerHTML = `
+        <div class="card-inner">
+
+            <div class="card-front">
+            </div>
+
+            <div class="card-back">
+
+                <div class="card-value">
+                    ${card.rank}
+                </div>
+
+                <div class="card-suit">
+                    ${card.suit}
+                </div>
+
+            </div>
+
+        </div>
+    `;
+
+    cardElement.addEventListener("click", () => {
+
+        cardElement.classList.toggle("flipped");
+
+        checkAllCards();
 
     });
 
+    game.appendChild(cardElement);
+
+});
 }
+/* Перевіряємо, чи всі карти відкриті */
+function checkAllCards() {
 
+const cards = document.querySelectorAll(".card");
 
-// Визначаємо комбінацію
-function checkCombination(cards) {
+const flippedCards =
+    document.querySelectorAll(".card.flipped");
 
-    const rankCounts = {};
+if (flippedCards.length === cards.length) {
 
-    cards.forEach(card => {
+    setTimeout(() => {
 
-        rankCounts[card.rank] =
-            (rankCounts[card.rank] || 0) + 1;
+        showResult();
 
-    });
-
-
-    const counts = Object.values(rankCounts).sort((a, b) => b - a);
-
-
-    // Каре
-    if (counts[0] === 4) {
-        return "🔥 FOUR OF A KIND!";
-    }
-
-
-    // Фул-хаус
-    if (counts[0] === 3 && counts[1] === 2) {
-        return "🎉 FULL HOUSE!";
-    }
-
-
-    // Трійка
-    if (counts[0] === 3) {
-        return "THREE OF A KIND";
-    }
-
-
-    // Дві пари
-    if (counts[0] === 2 && counts[1] === 2) {
-        return "TWO PAIR";
-    }
-
-
-    // Пара
-    if (counts[0] === 2) {
-        return "PAIR";
-    }
-
-
-    return "HIGH CARD";
-}
-
-
-// Показуємо popup
-function showPopup(message) {
-
-    result.textContent = message;
-
-    popup.classList.remove("hidden");
+    }, 700);
 
 }
+}
+/* Визначаємо комбінацію */
+function showResult() {
 
+const cards =
+    [...document.querySelectorAll(".card-back")];
 
-// Закриваємо popup
-closePopup.addEventListener("click", () => {
+const values = cards.map(card => {
 
-    popup.classList.add("hidden");
+    return parseInt(
+        card.querySelector(".card-value").textContent
+    );
 
 });
 
 
-// Нова гра
-newGameButton.addEventListener("click", () => {
+/* Однакові значення */
 
-    popup.classList.add("hidden");
+const counts = {};
 
-    startGame();
+values.forEach(value => {
+
+    counts[value] = (counts[value] || 0) + 1;
 
 });
 
 
-// Запускаємо гру при відкритті сторінки
+const numbers = Object.values(counts);
+
+
+let combination = "Старша карта";
+
+
+if (numbers.includes(4)) {
+
+    combination = "Каре";
+
+} else if (numbers.includes(3) && numbers.includes(2)) {
+
+    combination = "Фул-хаус";
+
+} else if (numbers.includes(3)) {
+
+    combination = "Трійка";
+
+} else if (numbers.filter(n => n === 2).length === 2) {
+
+    combination = "Дві пари";
+
+} else if (numbers.includes(2)) {
+
+    combination = "Пара";
+
+}
+
+
+/* Показуємо попап */
+
+result.textContent = combination;
+
+description.textContent =
+    "Вітаємо! Твоя покерна комбінація готова.";
+
+popup.classList.remove("hidden");
+}
+/* Нова гра */
+playAgain.addEventListener("click", () => {
+
+startGame();
+});
+/* Запускаємо гру */
 startGame();
