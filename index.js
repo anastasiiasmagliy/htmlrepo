@@ -16,6 +16,12 @@ const ranks = [
 
 let selectedCards = [];
 
+cardElement.innerHTML = ` <div class="card-inner"> <div class="card-front"> 🂠 </div>
+    <div class="card-back">
+        <img src="cards/￼{card.suit}">
+    </div>
+</div>
+`;
 
 // Створюємо колоду
 function createDeck() {

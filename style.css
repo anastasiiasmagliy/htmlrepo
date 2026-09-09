@@ -133,7 +133,7 @@ button:hover {
     margin-bottom: 25px;
 }
 
-cardElement.innerHTML = ` <div class="card-inner">
+cardElement.innerHTML = <div class="card-inner">
     <div class="card-front">
         🂠
     </div>
