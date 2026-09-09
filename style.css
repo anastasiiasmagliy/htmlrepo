@@ -60,7 +60,8 @@ h1 {
 }
 
 /* Закрита карта */
-.card-front {
+.card-front img
+.card-back img {
     background: #b5122b;
 
     display: flex;
