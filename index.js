@@ -69,7 +69,7 @@ function startGame() {
             <div class="card-inner">
 
                 <div class="card-front">
-                    🂠
+            
                 </div>
 
                 <div class="card-back">
