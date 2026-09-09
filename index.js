@@ -14,54 +14,26 @@ const ranks = [
 ];
 
 
-let selectedCards = [];
-
-cardElement.innerHTML = ` <div class="card-inner"> <div class="card-front"> 🂠 </div>
-    <div class="card-back">
-        <img src="cards/￼{card.suit}">
-    </div>
-</div>
-`;
-
-{
-    rank: "K",
-    suit: "♥",
-    image: "king-hearts.png"
-}
-
-const suits = [
-    { symbol: "♥", code: "H" },
-    { symbol: "♦", code: "D" },
-    { symbol: "♣", code: "C" },
-    { symbol: "♠", code: "S" }
-];
-
-const ranks = [
-    "2", "3", "4", "5", "6", "7",
-    "8", "9", "10", "J", "Q", "K", "A"
-];
-
 // Створюємо колоду
 function createDeck() {
 
-    const deck = [];
-for (let suit of suits) {
-for (let rank of ranks) {
+const deck = [];
 
-    deck.push({
-        suit: suit.symbol,
-        suitCode: suit.code,
-        rank: rank,
-        image: `${rank}${suit.code}.png`
-    });
+    for (let suit of suits) {
 
-}
+        for (let rank of ranks) {
+
+            deck.push({
+                suit: suit,
+                rank: rank
+            });
 
         }
     }
 
     return deck;
 }
+
 
 
 // Перемішуємо колоду
