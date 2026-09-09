@@ -23,6 +23,24 @@ cardElement.innerHTML = ` <div class="card-inner"> <div class="card-front"> 🂠
 </div>
 `;
 
+{
+    rank: "K",
+    suit: "♥",
+    image: "king-hearts.png"
+}
+
+const suits = [
+    { symbol: "♥", code: "H" },
+    { symbol: "♦", code: "D" },
+    { symbol: "♣", code: "C" },
+    { symbol: "♠", code: "S" }
+];
+
+const ranks = [
+    "2", "3", "4", "5", "6", "7",
+    "8", "9", "10", "J", "Q", "K", "A"
+];
+
 // Створюємо колоду
 function createDeck() {
 
