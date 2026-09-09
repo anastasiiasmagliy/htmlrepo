@@ -13,6 +13,11 @@ const ranks = [
     "8", "9", "10", "J", "Q", "K", "A"
 ];
 
+{
+    rank: "K",
+    suit: "♥",
+    image: "king_of_hearts.png"
+}
 
 // Створюємо колоду
 function createDeck() {
