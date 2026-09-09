@@ -14,6 +14,7 @@ const ranks = [
 ];
 
 
+
 let selectedCards = [];
 
 
