@@ -1,25 +1,12 @@
-* {
-    box-sizing: border-box;
-}
+body { margin: 0; min-height: 100vh;
 
-body {
-    font-family: Arial, sans-serif;
-    text-align: center;
-    background: #176b3a;
-    color: white;
-    margin: 0;
-    padding: 40px;
-}
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
 
-h1 {
-    margin-bottom: 10px;
-}
-
-.cards {
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-    margin: 40px 0;
+background: #075b3b;
+font-family: Arial, sans-serif;
 }
 
 /* Контейнер однієї карти */
