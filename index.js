@@ -73,9 +73,7 @@ function startGame() {
         cardElement.classList.add("card");
 
        cardElement.innerHTML = ` <div class="card-inner">
-Markup
-
-
+
     <div class="card-front">
         <img src="cards/card-back.png" alt="Card back">
     </div>
