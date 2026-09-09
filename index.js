@@ -21,6 +21,7 @@ let selectedCards = [];
 function createDeck() {
 
     const deck = [];
+for (let suit of suits) {
 
        for (let rank of ranks) {
 
