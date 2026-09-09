@@ -5,7 +5,6 @@ const popup = document.getElementById("popup");
 const result = document.getElementById("result");
 const closePopup = document.getElementById("closePopup");
 
-
 const suits = ["♥", "♦", "♣", "♠"];
 
 const ranks = [
@@ -14,9 +13,15 @@ const ranks = [
 ];
 
 {
-    rank: "K",
+    "K",
     suit: "♥",
     image: "king_of_hearts.png"
+}
+
+{
+    "2",
+    suit: "♥",
+    image: "2_of_hearts.png"
 }
 
 // Створюємо колоду
@@ -67,19 +72,21 @@ function startGame() {
 
         cardElement.classList.add("card");
 
-        cardElement.innerHTML = `
-            <div class="card-inner">
+       cardElement.innerHTML = ` <div class="card-inner">
+Markup
+
+
+    <div class="card-front">
+        <img src="cards/card-back.png" alt="Card back">
+    </div>
 
-                <div class="card-front">
-                    🂠
-                </div>
+    <div class="card-back">
+        <img src="cards/${card.suit}.png" alt="${card.rank} ${card.suit}">
+    </div>
 
-                <div class="card-back">
-                    ${card.rank}${card.suit}
-                </div>
+</div>
+`;
 
-            </div>
-        `;
 
         cardElement.addEventListener("click", () => {
 
