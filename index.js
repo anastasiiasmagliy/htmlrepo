@@ -22,14 +22,16 @@ function createDeck() {
 
     const deck = [];
 
-    for (let suit of suits) {
+       for (let rank of ranks) {
 
-        for (let rank of ranks) {
+    deck.push({
+        suit: suit.symbol,
+        suitCode: suit.code,
+        rank: rank,
+        image: `${rank}${suit.code}.png`
+    });
 
-            deck.push({
-                suit: suit,
-                rank: rank
-            });
+}
 
         }
     }
