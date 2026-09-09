@@ -28,8 +28,7 @@ function createDeck() {
 
     const deck = [];
 for (let suit of suits) {
-
-       for (let rank of ranks) {
+for (let rank of ranks) {
 
     deck.push({
         suit: suit.symbol,

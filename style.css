@@ -132,15 +132,3 @@ button:hover {
 .popup-content h2 {
     margin-bottom: 25px;
 }
-
-cardElement.innerHTML = <div class="card-inner">
-    <div class="card-front">
-        🂠
-    </div>
-
-    <div class="card-back">
-        <img src="cards/￼{card.rank}${card.suit}">
-    </div>
-
-</div>
-`;
