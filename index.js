@@ -75,7 +75,7 @@ function startGame() {
        cardElement.innerHTML = ` <div class="card-inner">
 
     <div class="card-front">
-        <img src="C:\Users\anton\htmlrepo\PNG-cards/card-back.png" alt="Card back">
+        <img src="C:\Users\anton\htmlrepo\PNG-cards/card back red.png" alt="Card back">
     </div>
 
     <div class="card-back">
