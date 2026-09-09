@@ -14,13 +14,13 @@ const ranks = [
 
 {
     "K",
-    suit: "♥",
-    image: "king_of_hearts.png"
+    suits: "♥",
+    img: "king_of_hearts.png"
 }
 
 {
     "2",
-    suit: "♥",
+    suits: "♥",
     image: "2_of_hearts.png"
 }
 
@@ -75,11 +75,11 @@ function startGame() {
        cardElement.innerHTML = ` <div class="card-inner">
 
     <div class="card-front">
-        <img src="cards/card-back.png" alt="Card back">
+        <img src="C:\Users\anton\htmlrepo\PNG-cards/card-back.png" alt="Card back">
     </div>
 
     <div class="card-back">
-        <img src="cards/${card.suit}.png" alt="${card.rank} ${card.suit}">
+        <img src="C:\Users\anton\htmlrepo\PNG-cards/${card.suit}.png" alt="${card.rank} ${card.suit}">
     </div>
 
 </div>
