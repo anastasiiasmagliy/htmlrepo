@@ -13,7 +13,68 @@ const ranks = [
     "8", "9", "10", "J", "Q", "K", "A"
 ];
 
+
 let selectedCards = [];
+
+const cards = [
+
+"./PNG-cards/2_of_clubs.png",
+"./PNG-cards/2_of_diamonds.png",
+"./PNG-cards/2_of_hearts.png",
+"./PNG-cards/2_of_spades.png",
+"./PNG-cards/3_of_clubs.png", 
+"./PNG-cards/3_of_diamonds.png",
+"./PNG-cards/3_of_hearts.png",
+"./PNG-cards/3_of_spades.png",
+"./PNG-cards/4_of_clubs.png",
+"./PNG-cards/4_of_diamonds.png",
+"./PNG-cards/4_of_hearts.png",
+"./PNG-cards/4_of_spades.png",
+"./PNG-cards/5_of_clubs.png",
+"./PNG-cards/5_of_diamonds.png",
+"./PNG-cards/5_of_hearts.png",
+"./PNG-cards/5_of_spades.png",
+"./PNG-cards/6_of_clubs.png",
+"./PNG-cards/6_of_diamonds.png",
+"./PNG-cards/6_of_hearts.png",
+"./PNG-cards/6_of_spades.png",
+"./PNG-cards/7_of_clubs.png",
+"./PNG-cards/7_of_diamonds.png",
+"./PNG-cards/7_of_hearts.png",
+"./PNG-cards/7_of_spades.png",
+"./PNG-cards/8_of_clubs.png",
+"./PNG-cards/8_of_diamonds.png",
+"./PNG-cards/8_of_hearts.png",
+"./PNG-cards/8_of_spades.png",
+"./PNG-cards/9_of_clubs.png",
+"./PNG-cards/9_of_diamonds.png",
+"./PNG-cards/9_of_hearts.png",
+"./PNG-cards/9_of_spades.png",
+"./PNG-cards/10_of_clubs.png",
+"./PNG-cards/10_of_diamonds.png",
+"./PNG-cards/10_of_hearts.png",
+"./PNG-cards/10_of_spades.png",
+"./PNG-cards/ace_of_clubs.png",
+"./PNG-cards/ace_of_diamonds.png",
+"./PNG-cards/ace_of_hearts.png",
+"./PNG-cards/ace_of_spades.png",
+"./PNG-cards/jack_of_clubs.png",
+"./PNG-cards/jack_of_diamonds.png",
+"./PNG-cards/jack_of_hearts.png",
+"./PNG-cards/jack_of_spades.png",
+"./PNG-cards/king_of_clubs.png",
+"./PNG-cards/king_of_diamonds.png",
+"./PNG-cards/king_of_hearts.png",
+"./PNG-cards/king_of_spades.png",
+"./PNG-cards/queen_of_clubs.png",
+"./PNG-cards/queen_of_diamonds.png",
+"./PNG-cards/queen_of_hearts.png",
+"./PNG-cards/queen_of_spades.png"
+];
+
+const cardFronts = document.querySelectorAll(".card-front");
+
+cardFronts.forEach((card, index) => { card.style.backgroundImage = url("${cards[index]}"); });
 
 
 // Створюємо колоду
