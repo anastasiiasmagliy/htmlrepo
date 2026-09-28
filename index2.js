@@ -143,15 +143,15 @@ return "TWO PAIR";
 if (counts[0] === 2) {
 return {
     
-    text: "PAIR";
-    popup: "popup-content"
+    "text": "PAIR",
+    "popup": "popup-content"
 };
 }
 // Нічого
 return {
     
-    text: "HIGH CARD";
-    popup: "popup-content1"
+    "text": "HIGH CARD",
+    "popup": "popup-content1"
 };
 }
 
