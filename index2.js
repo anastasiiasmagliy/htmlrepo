@@ -4,6 +4,7 @@ const popup = document.getElementById("popup");
 const popup1 = document.getElementById("popup1");
 const result = document.getElementById("result");
 const closePopup = document.getElementById("closePopup");
+const closePopup1 = document.getElementById("closePopup1");
 // =========================
 // МАСТІ
 // =========================
@@ -172,10 +173,11 @@ popup1.classList.remove ("hidden");
 // =========================
 closePopup.addEventListener("click", () => {
 popup.classList.add("hidden");
-popup1.classList.add("hidden");
 });
 
-
+closePopup1.addEventListener("click", () => {
+popup1.classList.add("hidden");
+});
 // =========================
 // НОВА ГРА
 // =========================
