@@ -157,13 +157,12 @@ return {
 // ПОКАЗУЄМО POPUP
 // =========================
 function showPopup(data) {
-result.textContent = data."text";
+result.textContent = data.text;
 popup.classList.remove("hidden");
 popup1.classList.remove("hidden");
 
 document
-getElementById (data."popup");
-getElementById (data."popup1");
+getElementById (data.popup);
 classList.remove ("hidden");
 }
 // =========================
