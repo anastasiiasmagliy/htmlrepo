@@ -59,7 +59,7 @@ object-fit: cover;
     border-color: aliceblue;
 }
 
-/* Закрита карта */
+/* Закрита карта 
 .card-back {
     
     background-size: cover;
@@ -69,7 +69,7 @@ object-fit: cover;
     justify-content: center;
     font-size: 50px;
 }
-
+*/
 
 /* Відкрита карта */
 .card-front {
