@@ -71,6 +71,7 @@ function startGame() {
                 </div>
 
                 <div class="card-front">
+                                <img src="./PNG-cards/king_of_hearts.png" alt="вапрорп">
                     ${card.rank}${card.suit}
                 </div>
 
