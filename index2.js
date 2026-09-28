@@ -163,31 +163,16 @@ if (counts[0] === 2 && counts[1] === 2) {
 }
 // Пара
 if (counts[0] === 2) {
-return "PAIR";
+return {
+    
+    combination: "PAIR";
+    popup: "popup-content"};
 }
 // Нічого
 return "HIGH CARD";
 }
 
-function getCombinationRank (checkCombination) {
 
-const ranks = {
-
-"HIGH CARD": 1,
-    "PAIR": 2,
-    "TWO PAIR": 3,
-    "THREE OF A KIND": 4,
-    "STRAIGHT": 5,
-    "FLUSH": 6,
-    "FULL HOUSE": 7,
-    "FOUR OF A KIND": 8,
-    "STRAIGHT FLUSH": 9
-
-};
-
-return ranks [combination];
-
-}
 // =========================
 // ПОКАЗУЄМО POPUP
 // =========================
