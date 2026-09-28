@@ -17,11 +17,7 @@ const suits = [
 // =========================
 // ЗНАЧЕННЯ КАРТ
 // =========================
-const ranks = [
-"2", "3", "4", "5", "6", "7",
-"8", "9", "10",
-"jack", "queen", "king", "ace"
-];
+const ranks = ["2", "3", "4", "5", "6", "7", "8", "9", "10", "jack", "queen", "king", "ace"];
 let selectedCards = [];
 // =========================
 // СТВОРЮЄМО КОЛОДУ
@@ -51,20 +47,25 @@ function startGame() {
 cardsContainer.innerHTML = "";
 selectedCards = [];
 const deck = shuffle(createDeck());
+
 // Беремо перші 5 карт
+
 const fiveCards = deck.slice(0, 5);
 fiveCards.forEach((card) => {
 // Створюємо карту
 const cardElement = document.createElement("div");
 cardElement.classList.add("card");
+
 // =========================
 // ШЛЯХ ДО КАРТИНКИ
 // =========================
-const imagePath =
-`./PNG-cards/${card.rank}_of_${card.suit}.png`;
+
+const imagePath = `./PNG-cards/${card.rank}_of_${card.suit}.png`;
+
 // =========================
 // HTML КАРТИ
 // =========================
+
 cardElement.innerHTML = `
 <div class="card-inner">
 <div class="card-back">
