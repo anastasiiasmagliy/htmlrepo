@@ -13,8 +13,6 @@ const ranks = [
     "8", "9", "10", "J", "Q", "K", "A"
 ];
 
-
-
 let selectedCards = [];
 
 
