@@ -97,12 +97,13 @@ console.log("Всі вибрані карти:", selectedCards);
 // =========================
 if (selectedCards.length === 5) {
 setTimeout(() => {
-const combination =
-checkCombination(selectedCards);
+
+const combination = checkCombination(selectedCards);
 showPopup(combination);
 }, 700);
 }
 });
+
 cardsContainer.appendChild(cardElement);
 });
 }
