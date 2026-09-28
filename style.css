@@ -60,7 +60,7 @@ h1 {
 }
 
 /* Закрита карта */
-.card-front {
+.card-back {
     background-image: url("./PNG-cards/card_back_red.png");
     background-size: cover;
     background-position: center;
@@ -72,18 +72,80 @@ h1 {
 
 
 /* Відкрита карта */
-.card-back {
-    background: white;
-    color: black;
+.card-front {
 
-    transform: rotateY(180deg);
-
+    background-size: cover;
+    background-position: center;
     display: flex;
     align-items: center;
     justify-content: center;
-
-    font-size: 35px;
+    transform: rotateY(180deg);
 }
+
+.card-1 .card-front { background-image: url("./PNG-cards/2_of_clubs.png"); }
+.card-2 .card-front { background-image: url("./PNG-cards/2_of_diamonds.png"); }
+.card-3 .card-front { background-image: url("./PNG-cards/2_of_hearts.png"); }
+.card-4 .card-front { background-image: url("./PNG-cards/2_of_spades.png"); }
+
+.card-5 .card-front { background-image: url("./PNG-cards/3_of_clubs.png"); }
+.card-6 .card-front { background-image: url("./PNG-cards/3_of_diamonds.png"); }
+.card-7 .card-front { background-image: url("./PNG-cards/3_of_hearts.png"); }
+.card-8 .card-front { background-image: url("./PNG-cards/3_of_spades.png"); }
+
+.card-9 .card-front { background-image: url("./PNG-cards/4_of_clubs.png"); }
+.card-10 .card-front { background-image: url("./PNG-cards/4_of_diamonds.png"); }
+.card-11 .card-front { background-image: url("./PNG-cards/4_of_hearts.png"); }
+.card-12 .card-front { background-image: url("./PNG-cards/4_of_spades.png"); }
+
+.card-13 .card-front { background-image: url("./PNG-cards/5_of_clubs.png"); }
+.card-14 .card-front { background-image: url("./PNG-cards/5_of_diamonds.png"); }
+.card-15 .card-front { background-image: url("./PNG-cards/5_of_hearts.png"); }
+.card-16 .card-front { background-image: url("./PNG-cards/5_of_spades.png"); }
+
+.card-17 .card-front { background-image: url("./PNG-cards/6_of_clubs.png"); }
+.card-18 .card-front { background-image: url("./PNG-cards/6_of_diamonds.png"); }
+.card-19 .card-front { background-image: url("./PNG-cards/6_of_hearts.png"); }
+.card-20 .card-front { background-image: url("./PNG-cards/6_of_spades.png"); }
+
+.card-21 .card-front { background-image: url("./PNG-cards/7_of_clubs.png"); }
+.card-22 .card-front { background-image: url("./PNG-cards/7_of_diamonds.png"); }
+.card-23 .card-front { background-image: url("./PNG-cards/7_of_hearts.png"); }
+.card-24 .card-front { background-image: url("./PNG-cards/7_of_spades.png"); }
+
+.card-25 .card-front { background-image: url("./PNG-cards/8_of_clubs.png"); }
+.card-26 .card-front { background-image: url("./PNG-cards/8_of_diamonds.png"); }
+.card-27 .card-front { background-image: url("./PNG-cards/8_of_hearts.png"); }
+.card-28 .card-front { background-image: url("./PNG-cards/8_of_spades.png"); }
+
+.card-29 .card-front { background-image: url("./PNG-cards/9_of_clubs.png"); }
+.card-30 .card-front { background-image: url("./PNG-cards/9_of_diamonds.png"); }
+.card-31 .card-front { background-image: url("./PNG-cards/9_of_hearts.png"); }
+.card-32 .card-front { background-image: url("./PNG-cards/9_of_spades.png"); }
+
+.card-33 .card-front { background-image: url("./PNG-cards/10_of_clubs.png"); }
+.card-34 .card-front { background-image: url("./PNG-cards/10_of_diamonds.png"); }
+.card-35 .card-front { background-image: url("./PNG-cards/10_of_hearts.png"); }
+.card-36 .card-front { background-image: url("./PNG-cards/10_of_spades.png"); }
+
+.card-37 .card-front { background-image: url("./PNG-cards/ace_of_clubs.png"); }
+.card-38 .card-front { background-image: url("./PNG-cards/ace_of_diamonds.png"); }
+.card-39 .card-front { background-image: url("./PNG-cards/ace_of_hearts.png"); }
+.card-40 .card-front { background-image: url("./PNG-cards/ace_of_spades.png"); }
+
+.card-41 .card-front { background-image: url("./PNG-cards/jack_of_clubs.png"); }
+.card-42 .card-front { background-image: url("./PNG-cards/jack_of_diamonds.png"); }
+.card-43 .card-front { background-image: url("./PNG-cards/jack_of_hearts.png"); }
+.card-44 .card-front { background-image: url("./PNG-cards/jack_of_spades.png"); }
+
+.card-45 .card-front { background-image: url("./PNG-cards/king_of_clubs.png"); }
+.card-46 .card-front { background-image: url("./PNG-cards/king_of_diamonds.png"); }
+.card-47 .card-front { background-image: url("./PNG-cards/king_of_hearts.png"); }
+.card-48 .card-front { background-image: url("./PNG-cards/king_of_spades.png"); }
+
+.card-49 .card-front { background-image: url("./PNG-cards/queen_of_clubs.png"); }
+.card-50 .card-front { background-image: url("./PNG-cards/queen_of_diamonds.png"); }
+.card-51 .card-front { background-image: url("./PNG-cards/queen_of_hearts.png"); }
+.card-52 .card-front { background-image: url("./PNG-cards/queen_of_spades.png"); }
 
 /* Кнопка */
 button {
