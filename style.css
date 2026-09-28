@@ -61,7 +61,7 @@ h1 {
 
 /* Закрита карта */
 .card-back {
-    background-image: url("./PNG-cards/card_back_red.png");
+    
     background-size: cover;
     background-position: center;
     display: flex;
