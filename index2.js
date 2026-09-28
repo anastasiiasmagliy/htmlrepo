@@ -1,7 +1,9 @@
 const cardsContainer = document.getElementById("cards");
 const newGameButton = document.getElementById("newGame");
 const popup = document.getElementById("popup");
+const popup1 = document.getElementById("popup1");
 const result = document.getElementById("result");
+const result1 = document.getElementById("result1");
 const closePopup = document.getElementById("closePopup");
 
 // =========================
