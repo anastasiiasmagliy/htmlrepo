@@ -106,6 +106,11 @@ showPopup(combination);
 cardsContainer.appendChild(cardElement);
 });
 }
+
+function choosePopup {
+
+    if 
+}
 // =========================
 // ВИЗНАЧАЄМО КОМБІНАЦІЮ
 // =========================
@@ -120,11 +125,11 @@ Object.values(rankCounts)
 .sort((a, b) => b - a);
 // Каре
 if (counts[0] === 4) {
-return "🔥 FOUR OF A KIND!";
+return "FOUR OF A KIND!";
 }
 // Фул-хаус
 if (counts[0] === 3 && counts[1] === 2) {
-return "🎉 FULL HOUSE!";
+return "FULL HOUSE!";
 }
 // Трійка
 if (counts[0] === 3) {
@@ -136,20 +141,31 @@ return "TWO PAIR";
 }
 // Пара
 if (counts[0] === 2) {
-return "PAIR";
+return {
+    
+    text: "PAIR";
+    popup: "popup-content"
+};
 }
 // Нічого
-return "HIGH CARD";
+return {
+    
+    text: "HIGH CARD";
+    popup: "popup-content1"
+};
 }
+
 // =========================
 // ПОКАЗУЄМО POPUP
 // =========================
-function showPopup(message) {
-result.textContent = message;
+function showPopup(data) {
+result.textContent = data.text;
 popup.classList.remove("hidden");
+
+document
+.getElementById (data.popup)
+.classList.remove ("hidden");
 }
-
-
 // =========================
 // ЗАКРИВАЄМО POPUP
 // =========================
