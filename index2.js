@@ -168,7 +168,7 @@ return "PAIR";
 return "HIGH CARD";
 }
 
-function getCombinationRank (combination) {
+function getCombinationRank (checkCombination) {
 
 const ranks = {
 
