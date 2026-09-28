@@ -131,9 +131,6 @@ function startGame() {
                 <img src="./PNG-cards/card_back_red.png" alt="вапрорп">
                 </div>
 
-                <div class="card-front">
-                    ${card.rank}${card.suit}
-                </div>
 
             </div>
         `;
