@@ -148,6 +148,8 @@ function showPopup(message) {
 result.textContent = message;
 popup.classList.remove("hidden");
 }
+
+
 // =========================
 // ЗАКРИВАЄМО POPUP
 // =========================
