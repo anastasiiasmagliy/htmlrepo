@@ -145,7 +145,9 @@ Object.values(rankCounts)
 .sort((a, b) => b - a);
 // Каре
 if (counts[0] === 4) {
-return "FOUR OF A KIND";
+return {
+    combination: "FOUR OF A KIND";
+    popup: "popup-content1"};
 }
 // Фул-хаус
 if (counts[0] === 3 && counts[1] === 2) {
@@ -192,20 +194,7 @@ return ranks [combination];
 
 function showPopup(message) {
 result.textContent = message;
-popup.classList.remove("hidden");
-
-
-popup.classList.add("hidden");
-popup1.classList.add("hidden");
-
-const combinationRank = getCombinationRank (combination);
-if (combinationRank > 5) {
-    popup1.classList.remove ("hidden");
-} else
-{
-    popup.classList.remove ("hidden");}
-}
-
+popup.classList.remove("hidden");}
 
 // =========================
 // ЗАКРИВАЄМО POPUP
