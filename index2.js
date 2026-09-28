@@ -172,15 +172,19 @@ popup1.classList.remove ("hidden");
 // ЗАКРИВАЄМО POPUP
 // =========================
 closePopup.addEventListener("click", () => {
+popup1.classList.add("hidden");
 popup.classList.add("hidden");
 });
 
 closePopup1.addEventListener("click", () => {
+popup.classList.add("hidden");
 popup1.classList.add("hidden");
 });
+
 // =========================
 // НОВА ГРА
 // =========================
+
 newGameButton.addEventListener("click", () => {
 popup.classList.add("hidden");
 popup1.classList.add("hidden");
