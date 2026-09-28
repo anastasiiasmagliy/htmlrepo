@@ -119,13 +119,14 @@ console.log("Всі вибрані карти:", selectedCards);
 // =========================
 // ЯКЩО ВІДКРИТО 5 КАРТ
 // =========================
+
 if (selectedCards.length === 5) {
 setTimeout(() => {
-const combination =
-checkCombination(selectedCards);
-showPopup(combination);
-}, 700);
+
+const combination = checkCombination(selectedCards);
+showPopup(combination);}, 700);
 }
+
 });
 cardsContainer.appendChild(cardElement);
 });
@@ -139,16 +140,17 @@ const rankCounts = {};
 cards.forEach(card => {rankCounts[card.rank] =
 (rankCounts[card.rank] || 0) + 1;
 });
+
 const counts =
 Object.values(rankCounts)
 .sort((a, b) => b - a);
 // Каре
 if (counts[0] === 4) {
-return "🔥 FOUR OF A KIND!";
+return "FOUR OF A KIND";
 }
 // Фул-хаус
 if (counts[0] === 3 && counts[1] === 2) {
-return "🎉 FULL HOUSE!";
+return "FULL HOUSE";
 }
 // Трійка
 if (counts[0] === 3) {
@@ -156,7 +158,7 @@ return "THREE OF A KIND";
 }
 // Дві пари
 if (counts[0] === 2 && counts[1] === 2) {
-return "TWO PAIR";
+    return "TWO PAIR";
 }
 // Пара
 if (counts[0] === 2) {
@@ -165,6 +167,26 @@ return "PAIR";
 // Нічого
 return "HIGH CARD";
 }
+
+function getCombinationRank (combination) {
+
+const ranks = {
+
+"HIGH CARD": 1,
+    "PAIR": 2,
+    "TWO PAIR": 3,
+    "THREE OF A KIND": 4,
+    "STRAIGHT": 5,
+    "FLUSH": 6,
+    "FULL HOUSE": 7,
+    "FOUR OF A KIND": 8,
+    "STRAIGHT FLUSH": 9
+
+};
+
+return ranks [combination];
+
+}
 // =========================
 // ПОКАЗУЄМО POPUP
 // =========================
@@ -172,7 +194,19 @@ return "HIGH CARD";
 function showPopup(message) {
 result.textContent = message;
 popup.classList.remove("hidden");
+
+
+popup.classList.add("hidden");
+popup1.classList.add("hidden");
+
+const combinationRank = getCombinationRank (combination);
+if (combinationRank > 5) {
+    popup1.classList.remove ("hidden");
+} else
+{
+    popup.classList.remove ("hidden");}
 }
+
 
 // =========================
 // ЗАКРИВАЄМО POPUP
