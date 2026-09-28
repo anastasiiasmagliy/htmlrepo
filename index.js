@@ -18,7 +18,7 @@ const ranks = [
 ];
 
 
-let cardImage = `"./PNG-cards/${ranks}_of_${suits}.png",`;
+let cardImageName = `"./PNG-cards/${ranks}_of_${suits}.png",`;
 
 let selectedCards = [];
 
