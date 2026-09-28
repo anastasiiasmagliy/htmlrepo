@@ -67,7 +67,7 @@ function startGame() {
             <div class="card-inner">
 
                 <div class="card-front">
-                <img src="../PNG-cards/card_back_red.png" alt="вапрорп">
+                <img src="./PNG-cards/card_back_red.png" alt="вапрорп">
                 </div>
 
                 <div class="card-back">
