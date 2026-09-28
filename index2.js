@@ -170,11 +170,10 @@ classList.remove ("hidden");
 // =========================
 closePopup.addEventListener("click", () => {
 popup.classList.add("hidden");
-});
-
-closePopup.addEventListener("click", () => {
 popup1.classList.add("hidden");
 });
+
+
 // =========================
 // НОВА ГРА
 // =========================
