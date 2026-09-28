@@ -104,9 +104,13 @@ cardElement.addEventListener("click", () => {
 if (cardElement.classList.contains("flipped")) {
 return;
 }
+
 // Перевертаємо карту
+
 cardElement.classList.add("flipped");
+
 // Додаємо карту до вибраних
+
 selectedCards.push(card);
 console.log("Відкрита карта:", card);
 console.log("Всі вибрані карти:", selectedCards);
@@ -129,8 +133,8 @@ cardsContainer.appendChild(cardElement);
 // =========================
 function checkCombination(cards) {
 const rankCounts = {};
-cards.forEach(card => {
-rankCounts[card.rank] =
+
+cards.forEach(card => {rankCounts[card.rank] =
 (rankCounts[card.rank] || 0) + 1;
 });
 const counts =
@@ -162,10 +166,12 @@ return "HIGH CARD";
 // =========================
 // ПОКАЗУЄМО POPUP
 // =========================
+
 function showPopup(message) {
 result.textContent = message;
 popup.classList.remove("hidden");
 }
+
 // =========================
 // ЗАКРИВАЄМО POPUP
 // =========================
