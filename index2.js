@@ -1,6 +1,7 @@
 const cardsContainer = document.getElementById("cards");
 const newGameButton = document.getElementById("newGame");
 const popup = document.getElementById("popup");
+const popup1 = document.getElementById("popup1");
 const result = document.getElementById("result");
 const closePopup = document.getElementById("closePopup");
 // =========================
@@ -148,7 +149,7 @@ return {
 return {
     
     "text": "HIGH CARD",
-    "popup": "popup-content1"
+    "popup1": "popup-content1"
 };
 }
 
