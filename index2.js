@@ -139,7 +139,7 @@ return "THREE OF A KIND";
 if (counts[0] === 2 && counts[1] === 2) {
 return {
     
-     data.text: "TWO PAIRS",
+     text: "TWO PAIRS",
      "popup1": "popup-content1"
 
 };
@@ -149,14 +149,14 @@ return {
 if (counts[0] === 2) {
 return {
     
-    data.text: "PAIR",
+    text: "PAIR",
     "popup": "popup-content"
 };
 }
 // Нічого
 return {
     
-    data.text: "HIGH CARD",
+    text: "HIGH CARD",
     "popup1": "popup-content1"
 };
 }
