@@ -163,7 +163,8 @@ popup1.classList.remove("hidden");
 
 document
 getElementById (data.popup);
-classList.remove ("hidden");
+popup.classList.remove ("hidden");
+popup1.classList.remove ("hidden");
 }
 // =========================
 // ЗАКРИВАЄМО POPUP
