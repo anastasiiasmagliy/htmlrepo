@@ -146,7 +146,6 @@ Object.values(rankCounts)
 // Каре
 if (counts[0] === 4) {
 return {
-    combination: "FOUR OF A KIND";
     popup: "popup-content1"};
 }
 // Фул-хаус
