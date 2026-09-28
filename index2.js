@@ -107,10 +107,6 @@ cardsContainer.appendChild(cardElement);
 });
 }
 
-function choosePopup {
-
-    if 
-}
 // =========================
 // ВИЗНАЧАЄМО КОМБІНАЦІЮ
 // =========================
