@@ -47,9 +47,9 @@ h1 {
 
 /* Обидві сторони карти */
 .card-front,
-.card-back {
+.card-back img {
     position: absolute;
-
+object-fit: cover;
     width: 100%;
     height: 100%;
 
