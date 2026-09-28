@@ -18,7 +18,19 @@ const ranks = [
 ];
 
 
-let cardImageName = `"./PNG-cards/${ranks}_of_${suits}.png",`;
+let cardImageName = `./PNG-cards/${ranks}_of_${suits}.png`;
+
+function getImageSource(category) {
+  if (category === 'admin') {
+    return cardImageName;
+  }
+  
+}
+
+const myImage = document.getElementById('my-img');
+
+// Присвоюємо результат виконання функції у властивість src
+
 
 let selectedCards = [];
 
@@ -139,7 +151,8 @@ function startGame() {
                 <div class="card-back">
                 <img src="./PNG-cards/card_back_red.png" alt="вапрорп">
                 </div>
-
+                <div class="card-front">
+                myImage.src = getImageSource('admin');
 
             </div>
         `;
