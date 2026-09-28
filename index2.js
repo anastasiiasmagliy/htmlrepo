@@ -3,15 +3,18 @@ const newGameButton = document.getElementById("newGame");
 const popup = document.getElementById("popup");
 const result = document.getElementById("result");
 const closePopup = document.getElementById("closePopup");
+
 // =========================
 // МАСТІ
 // =========================
+
 const suits = [
 "hearts",
 "diamonds",
 "clubs",
 "spades"
 ];
+
 // =========================
 // ЗНАЧЕННЯ КАРТ
 // =========================
@@ -20,67 +23,82 @@ const ranks = [
 "8", "9", "10",
 "jack", "queen", "king", "ace"
 ];
+
 let selectedCards = [];
+
 // =========================
 // СТВОРЮЄМО КОЛОДУ
 // =========================
+
 function createDeck() {
 const deck = [];
 for (let suit of suits) {
 for (let rank of ranks) {
-deck.push({
+
+    deck.push({
 suit: suit,
 rank: rank
+
 });
 }
 }
+
 return deck;
 }
+
 // =========================
 // ПЕРЕМІШУЄМО КОЛОДУ
 // =========================
+
 function shuffle(deck) {
 return deck.sort(() => Math.random() - 0.5);
 }
+
 // =========================
 // СТВОРЮЄМО ГРУ
 // =========================
+
 function startGame() {
 cardsContainer.innerHTML = "";
 selectedCards = [];
 const deck = shuffle(createDeck());
 // Беремо перші 5 карт
 const fiveCards = deck.slice(0, 5);
+
 fiveCards.forEach((card) => {
+
 // Створюємо карту
 const cardElement = document.createElement("div");
 cardElement.classList.add("card");
+
 // =========================
 // ШЛЯХ ДО КАРТИНКИ
 // =========================
+
 const imagePath =
 `./PNG-cards/${card.rank}_of_${card.suit}.png`;
+
 // =========================
 // HTML КАРТИ
 // =========================
+
 cardElement.innerHTML = `
+
 <div class="card-inner">
+
 <div class="card-back">
-<img
-src="./PNG-cards/card_back_red.png"
-alt="Card back"
->
+<img src="./PNG-cards/card_back_red.png" alt="Card back">
 </div>
-<div
-class="card-front"
-style="background-image: url('${imagePath}')"
->
+
+<div class="card-front" style="background-image: url('${imagePath}')">
 </div>
-</div>
-`;
+
+</div>`;
+
 // =========================
 // НАТИСКАННЯ НА КАРТУ
 // =========================
+
 cardElement.addEventListener("click", () => {
 // Не дозволяємо натискати повторно
 if (cardElement.classList.contains("flipped")) {
