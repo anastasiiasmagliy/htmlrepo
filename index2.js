@@ -137,20 +137,26 @@ return "THREE OF A KIND";
 }
 // Дві пари
 if (counts[0] === 2 && counts[1] === 2) {
-return "TWO PAIR";
+return {
+    
+     data.text: "TWO PAIRS",
+     "popup1": "popup-content1"
+
+};
 }
+
 // Пара
 if (counts[0] === 2) {
 return {
     
-    text: "PAIR",
+    data.text: "PAIR",
     "popup": "popup-content"
 };
 }
 // Нічого
 return {
     
-    text: "HIGH CARD",
+    data.text: "HIGH CARD",
     "popup1": "popup-content1"
 };
 }
@@ -161,9 +167,8 @@ return {
 function showPopup(data) {
 result.textContent = data.text;
 popup.classList.remove("hidden");
+
 document.querySelectorAll (".popup-content").forEach(element => {element.classList.add("hidden");
-
-
 
 });
 
@@ -179,6 +184,7 @@ popup1.classList.remove ("hidden");
 // =========================
 // ЗАКРИВАЄМО POPUP
 // =========================
+
 closePopup.addEventListener("click", () => {
 popup1.classList.add("hidden");
 popup.classList.add("hidden");
