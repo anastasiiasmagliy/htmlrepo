@@ -208,6 +208,17 @@ button:hover {
     min-width: 300px;
 }
 
+.popup-content1 {
+
+  background: rgb(9, 196, 3);
+    color: black;
+
+    padding: 40px;
+    border-radius: 15px;
+
+    min-width: 300px;
+}
+
 .popup-content h2 {
     margin-bottom: 25px;
 }
