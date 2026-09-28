@@ -159,11 +159,12 @@ return {
 function showPopup(data) {
 result.textContent = data."text";
 popup.classList.remove("hidden");
+popup1.classList.remove("hidden");
 
 document
-.getElementById (data."popup");
-.getElementById (data."popup1");
-.classList.remove ("hidden");
+getElementById (data."popup");
+getElementById (data."popup1");
+classList.remove ("hidden");
 }
 // =========================
 // ЗАКРИВАЄМО POPUP
