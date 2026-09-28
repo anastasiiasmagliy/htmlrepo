@@ -66,11 +66,11 @@ function startGame() {
         cardElement.innerHTML = `
             <div class="card-inner">
 
-                <div class="card-front">
+                <div class="card-back">
                 <img src="./PNG-cards/card_back_red.png" alt="вапрорп">
                 </div>
 
-                <div class="card-back">
+                <div class="card-front">
                     ${card.rank}${card.suit}
                 </div>
 
