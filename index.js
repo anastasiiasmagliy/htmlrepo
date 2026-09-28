@@ -24,7 +24,7 @@ let selectedCards = [];
 
 const cards = [
 
-"./PNG-cards/2_of_clubs.png",
+ "./PNG-cards/2_of_clubs.png",
 "./PNG-cards/2_of_diamonds.png",
 "./PNG-cards/2_of_hearts.png",
 "./PNG-cards/2_of_spades.png",
@@ -76,6 +76,8 @@ const cards = [
 "./PNG-cards/queen_of_diamonds.png",
 "./PNG-cards/queen_of_hearts.png",
 "./PNG-cards/queen_of_spades.png"
+
+
 ];
 
 const cardFronts = document.querySelectorAll(".card-front");
