@@ -5,14 +5,20 @@ const popup = document.getElementById("popup");
 const result = document.getElementById("result");
 const closePopup = document.getElementById("closePopup");
 
+let suitHearts = "hearts";
+let suitClubs = "clubs";
+let suitSpades = "spades";
+let suitDiamonds = "diamonds";
 
-const suits = ["♥", "♦", "♣", "♠"];
+const suits = [suitHearts, suitDiamonds, suitClubs, suitSpades];
 
 const ranks = [
     "2", "3", "4", "5", "6", "7",
     "8", "9", "10", "J", "Q", "K", "A"
 ];
 
+
+let cardImage = `"./PNG-cards/${ranks}_of_${suits}.png",`;
 
 let selectedCards = [];
 
@@ -75,6 +81,7 @@ const cards = [
 const cardFronts = document.querySelectorAll(".card-front");
 
 cardFronts.forEach((card, index) => { card.style.backgroundImage = url("${cards[index]}"); });
+
 
 
 // Створюємо колоду
