@@ -82,7 +82,7 @@ h1 {
     transform: rotateY(180deg);
 }
 
-.card-1 .card-front { background-image: url("./PNG-cards/2_of_clubs.png"); }
+/* .card-1 .card-front { background-image: url("./PNG-cards/2_of_clubs.png"); }
 .card-2 .card-front { background-image: url("./PNG-cards/2_of_diamonds.png"); }
 .card-3 .card-front { background-image: url("./PNG-cards/2_of_hearts.png"); }
 .card-4 .card-front { background-image: url("./PNG-cards/2_of_spades.png"); }
