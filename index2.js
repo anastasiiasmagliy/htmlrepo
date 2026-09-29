@@ -116,19 +116,26 @@ rankCounts[card.rank] =
 });
 const counts = Object.values(rankCounts)
 .sort((a, b) => b - a);
+
 // Каре
 
 if (counts[0] === 4) {
-return "FOUR OF A KIND!";
-}
+return {
+    text: "four of a kind",
+     "popup1": "popup-content1"
+};}
 // Фул-хаус
 if (counts[0] === 3 && counts[1] === 2) {
-return "FULL HOUSE!";
-}
+return {
+    text: "Full house",
+     "popup1": "popup-content1"
+};}
 // Трійка
 if (counts[0] === 3) {
-return "THREE OF A KIND";
-}
+return {
+    text: "Three of a kind",
+     "popup1": "popup-content1"
+};}
 // Дві пари
 if (counts[0] === 2 && counts[1] === 2) {
 return {
