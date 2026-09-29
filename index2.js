@@ -181,10 +181,13 @@ document.querySelectorAll(".popup-content, .popup-content1")
 // Показуємо потрібний overlay
 if (data.popup === "popup-content") {
     popup.classList.remove("hidden");
+    document.querySelector(".popup-content") .classList.remove ("hidden");
 }
 
 if (data.popup === "popup-content1") {
     popup1.classList.remove("hidden");
+        document.querySelector(".popup-content1") .classList.remove ("hidden");
+
 }
 }
 
