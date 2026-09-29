@@ -165,12 +165,14 @@ return {
 // =========================
 // ПОКАЗУЄМО POPUP
 // =========================
+ 
 function showPopup(data) { 
     result.textContent = data.text;
 
 // Спочатку ховаємо все
 popup.classList.add("hidden");
 popup1.classList.add("hidden");
+ 
 
 document.querySelectorAll(".popup-content, .popup-content1")
     .forEach(element => {element.classList.add("hidden");
