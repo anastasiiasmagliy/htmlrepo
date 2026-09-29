@@ -165,21 +165,34 @@ return {
 // =========================
 // ПОКАЗУЄМО POPUP
 // =========================
-function showPopup(data) {
-result.textContent = data.text;
-popup.classList.remove("hidden");
-popup1.classList.remove("hidden");
+function showPopup(data) { result.textContent = data.text;
 
+// Спочатку ховаємо все
+popup.classList.add("hidden");
+popup1.classList.add("hidden");
 
-document.querySelectorAll (".popup-content, .popup-content1").forEach(element => {element.classList.add("hidden");
+document.querySelectorAll(".popup-content, .popup-content1")
+    .forEach(element => {
+        element.classList.add("hidden");
+    });
 
-});
-
-
+// Показуємо потрібний popup
 const selectedPopup = document.querySelector(`.${data.popup}`);
 
-if (selectedPopup) {selectedPopup.classList.remove ("hidden");}
+if (selectedPopup) {
+    selectedPopup.classList.remove("hidden");
 }
+
+// Показуємо потрібний overlay
+if (data.popup === "popup-content") {
+    popup.classList.remove("hidden");
+}
+
+if (data.popup === "popup-content1") {
+    popup1.classList.remove("hidden");
+}
+}
+
 
 // =========================
 // ЗАКРИВАЄМО POPUP
