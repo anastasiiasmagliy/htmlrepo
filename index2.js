@@ -5,6 +5,7 @@ const popup1 = document.getElementById("popup1");
 const result = document.getElementById("result");
 const closePopup = document.getElementById("closePopup");
 const closePopup1 = document.getElementById("closePopup1");
+const text = document.getElementById("text");
 // =========================
 // МАСТІ
 // =========================
