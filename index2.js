@@ -167,6 +167,8 @@ return {
 function showPopup(data) {
 result.textContent = data.text;
 popup.classList.remove("hidden");
+popup1.classList.remove("hidden");
+
 
 document.querySelectorAll (".popup-content").forEach(element => {element.classList.add("hidden");
 
@@ -190,7 +192,7 @@ popup1.classList.add("hidden");
 });
 
 closePopup1.addEventListener("click", () => {
-    popup.classList.add("hidden");
+popup.classList.add("hidden");
 popup1.classList.add("hidden");
 });
 
