@@ -171,16 +171,15 @@ popup.classList.remove("hidden");
 popup1.classList.remove("hidden");
 
 
-document.querySelectorAll (".popup-content").forEach(element => {element.classList.add("hidden");
+document.querySelectorAll (".popup-content, .popup-content1").forEach(element => {element.classList.add("hidden");
 
 });
-}
 
-document
-getElementById (data.popup);
-getElementById (data.popup1);
-popup.classList.remove ("hidden");
-popup1.classList.remove ("hidden");
+
+const selectedPopup = document.querySelector(`.${data.popup}`);
+
+if (selectedPopup) {selectedPopup.classList.remove ("hidden");}
+}
 
 // =========================
 // ЗАКРИВАЄМО POPUP
