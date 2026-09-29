@@ -177,7 +177,7 @@ if (data.popup === "popup-content") {
     document.querySelector(".popup-content") .classList.remove ("hidden");
 }
 
-if (data.popup === "popup-content1") {
+if (data.popup1 === "popup-content1") {
     popup1.classList.remove("hidden");
         document.querySelector(".popup-content1") .classList.remove ("hidden");
 
