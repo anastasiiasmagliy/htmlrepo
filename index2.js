@@ -174,17 +174,9 @@ document.querySelectorAll (".popup-content").forEach(element => {element.classLi
 });
 }
 
-function showPopup1(data) {
-result.textContent = data.text;
-popup1.classList.remove("hidden");
-
-document.querySelectorAll (".popup-content1").forEach(element => {element.classList.add("hidden");
-
-});
-}
-
-document getElementById (data.popup);
-document getElementById (data.popup1);
+document
+getElementById (data.popup);
+getElementById (data.popup1);
 popup.classList.remove ("hidden");
 popup1.classList.remove ("hidden");
 
@@ -193,12 +185,10 @@ popup1.classList.remove ("hidden");
 // =========================
 
 closePopup.addEventListener("click", () => {
-popup1.classList.add("hidden");
 popup.classList.add("hidden");
 });
 
 closePopup1.addEventListener("click", () => {
-popup.classList.add("hidden");
 popup1.classList.add("hidden");
 });
 
