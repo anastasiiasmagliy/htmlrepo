@@ -121,10 +121,10 @@ cards.forEach(card => {
 rankCounts[card.rank] =
 (rankCounts[card.rank] || 0) + 1;
 });
-const counts =
-Object.values(rankCounts)
+const counts = Object.values(rankCounts)
 .sort((a, b) => b - a);
 // Каре
+
 if (counts[0] === 4) {
 return "FOUR OF A KIND!";
 }
