@@ -121,26 +121,26 @@ const counts = Object.values(rankCounts)
 
 if (counts[0] === 4) {
 return {
-    text: "four of a kind",
+    text1: "four of a kind",
      "popup1": "popup-content1"
 };}
 // Фул-хаус
 if (counts[0] === 3 && counts[1] === 2) {
 return {
-    text: "Full house",
+    text1: "Full house",
      "popup1": "popup-content1"
 };}
 // Трійка
 if (counts[0] === 3) {
 return {
-    text: "Three of a kind",
+    text1: "Three of a kind",
      "popup1": "popup-content1"
 };}
 // Дві пари
 if (counts[0] === 2 && counts[1] === 2) {
 return {
     
-     text: "TWO PAIRS",
+     text1: "TWO PAIRS",
      "popup1": "popup-content1"
 
 };
@@ -150,7 +150,7 @@ return {
 if (counts[0] === 2) {
 return {
     
-    text: "PAIR",
+    text1: "PAIR",
     "popup1": "popup-content1"
 };
 }
@@ -170,6 +170,10 @@ function showPopup(data) {
 
 result.textContent = data.text;
 popup.classList.add ("hidden");
+
+result.textContent = data.text1;
+popup1.classList.add ("hidden");
+
 
 
 if (data.popup === "popup-content") {
