@@ -172,7 +172,7 @@ popup.classList.remove("hidden");
 document.querySelectorAll (".popup-content").forEach(element => {element.classList.add("hidden");
 
 });
-
+}
 
 function showPopup1(data) {
 result.textContent = data.text;
@@ -181,13 +181,13 @@ popup1.classList.remove("hidden");
 document.querySelectorAll (".popup-content1").forEach(element => {element.classList.add("hidden");
 
 });
+}
 
-document
-getElementById (data.popup);
-getElementById (data.popup1);
+document getElementById (data.popup);
+document getElementById (data.popup1);
 popup.classList.remove ("hidden");
 popup1.classList.remove ("hidden");
-}
+
 // =========================
 // ЗАКРИВАЄМО POPUP
 // =========================
