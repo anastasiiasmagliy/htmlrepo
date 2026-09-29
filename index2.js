@@ -150,7 +150,7 @@ return {
 if (counts[0] === 2) {
 return {
     
-    text1: "PAIR",
+    text: "PAIR",
     "popup1": "popup-content1"
 };
 }
@@ -168,10 +168,10 @@ return {
 
 function showPopup(data) {
 
-result.textContent = data.text;
+// result.textContent = data.text;
 popup.classList.add ("hidden");
 
-result.textContent = data.text1;
+// result.textContent = data.text1;
 popup1.classList.add ("hidden");
 
 
