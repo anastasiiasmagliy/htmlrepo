@@ -165,7 +165,8 @@ return {
 // =========================
 // ПОКАЗУЄМО POPUP
 // =========================
-function showPopup(data) { result.textContent = data.text;
+function showPopup(data) { 
+    result.textContent = data.text;
 
 // Спочатку ховаємо все
 popup.classList.add("hidden");
@@ -177,7 +178,6 @@ document.querySelectorAll(".popup-content, .popup-content1")
     });
 
 // Показуємо потрібний popup
-const selectedPopup = document.querySelector(`.${data.popup}`);
 
 if (selectedPopup) {
     selectedPopup.classList.remove("hidden");
