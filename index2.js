@@ -151,14 +151,14 @@ if (counts[0] === 2) {
 return {
     
     text: "PAIR",
-    "popup": "popup-content"
+    "popup1": "popup-content1"
 };
 }
 // Нічого
 return {
     
     text: "HIGH CARD",
-    "popup1": "popup-content1"
+    "popup": "popup-content"
 };
 }
 
