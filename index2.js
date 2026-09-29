@@ -186,9 +186,12 @@ popup1.classList.remove ("hidden");
 
 closePopup.addEventListener("click", () => {
 popup.classList.add("hidden");
+popup1.classList.add("hidden");
+
 });
 
 closePopup1.addEventListener("click", () => {
+    popup.classList.add("hidden");
 popup1.classList.add("hidden");
 });
 
