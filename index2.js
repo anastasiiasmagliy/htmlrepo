@@ -178,10 +178,6 @@ document.querySelectorAll(".popup-content, .popup-content1")
 
 // Показуємо потрібний popup
 
-if (selectedPopup) {
-    selectedPopup.classList.remove("hidden");
-}
-
 // Показуємо потрібний overlay
 if (data.popup === "popup-content") {
     popup.classList.remove("hidden");
