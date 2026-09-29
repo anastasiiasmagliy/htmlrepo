@@ -166,6 +166,22 @@ return {
 // ПОКАЗУЄМО POPUP
 // =========================
 
+function showPopup(data) {
+
+result.textContent = data.text;
+popup.classList.add ("hidden");
+
+
+if (data.popup === "popup-content") {
+    popup.classList.remove("hidden");
+    document.querySelector(".popup-content") .classList.remove ("hidden");
+}
+
+if (data.popup === "popup-content1") {
+    popup1.classList.remove("hidden");
+        document.querySelector(".popup-content1") .classList.remove ("hidden");
+
+}}
 /*
 //* function showPopup(data) { 
     result.textContent = data.text;
