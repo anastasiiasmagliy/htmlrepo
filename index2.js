@@ -174,7 +174,13 @@ document.querySelectorAll (".popup-content").forEach(element => {element.classLi
 });
 
 
+function showPopup1(data) {
+result.textContent = data.text;
 popup1.classList.remove("hidden");
+
+document.querySelectorAll (".popup-content1").forEach(element => {element.classList.add("hidden");
+
+});
 
 document
 getElementById (data.popup);
