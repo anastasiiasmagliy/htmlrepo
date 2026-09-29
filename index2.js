@@ -69,15 +69,9 @@ const imagePath = `./PNG-cards/${card.rank}_of_${card.suit}.png`;
 cardElement.innerHTML = `
 <div class="card-inner">
 <div class="card-back">
-<img
-src="./PNG-cards/card_back_red.png"
-alt="Card back"
->
+<img src="./PNG-cards/card_back_red.png" alt="Card back">
 </div>
-<div
-class="card-front"
-style="background-image: url('${imagePath}')"
->
+<div class="card-front" style="background-image: url('${imagePath}')">
 </div>
 </div>
 `;
