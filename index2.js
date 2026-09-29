@@ -173,8 +173,7 @@ popup.classList.add("hidden");
 popup1.classList.add("hidden");
 
 document.querySelectorAll(".popup-content, .popup-content1")
-    .forEach(element => {
-        element.classList.add("hidden");
+    .forEach(element => {element.classList.add("hidden");
     });
 
 // Показуємо потрібний popup
